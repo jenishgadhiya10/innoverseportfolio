@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InnoVerse | Premium IT Portfolio</title>
+  <meta name="description" content="InnoVerse is a premium IT business portfolio showcasing services, team strength, and case studies." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Fixed FX layers -->
+  <div class="noise"></div>
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+  <div class="cursor-glow"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+
+      <!-- Brand -->
+      <a href="#home" class="brand">
+        <div class="brand-mark">
+          <span>
+            <img src="logo.png" alt="InnoVerse Logo" >
+          </span>
+          <div class="brand-ring"></div>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">InnoVerse</span>
+          <small>Digital Growth &amp; IT Solutions</small>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav" id="navMenu" role="navigation" aria-label="Main navigation">
+        <a href="#about"   class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#process"  class="nav-link">Process</a>
+        <a href="#team"     class="nav-link">Team</a>
+        <a href="#cases"    class="nav-link">Case Studies</a>
+
+        <!-- Dropdown: Assignment Tasks -->
+        <div class="nav-dropdown">
+          <button class="nav-link nav-dropbtn" aria-haspopup="true" aria-expanded="false">
+            Tasks <i class="fa-solid fa-chevron-down fa-xs"></i>
+          </button>
+          <div class="dropdown-panel glass">
+            <a href="#company-profile" class="dropdown-item">
+              <i class="fa-solid fa-building"></i>
+              <span>
+                <strong>Company Profile</strong>
+                <small>Start-up structure report</small>
+              </span>
+            </a>
+            <a href="#managers-guide" class="dropdown-item">
+              <i class="fa-solid fa-compass"></i>
+              <span>
+                <strong>Manager's Guide</strong>
+                <small>Information poster</small>
+              </span>
+            </a>
+            <a href="#opinion" class="dropdown-item">
+              <i class="fa-solid fa-brain"></i>
+              <span>
+                <strong>Opinion + SWOT</strong>
+                <small>Individual technology opinion</small>
+              </span>
+            </a>
+            <a href="#legal-illegal" class="dropdown-item">
+  <i class="fa-solid fa-scale-balanced"></i>
+  <span>
+    <strong>Legal or Illegal?</strong>
+    <small>AI Traffic Light Model</small>
+  </span>
+</a>
+          </div>
+        </div>
+
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header CTA -->
+      <a href="#contact" class="btn btn-primary hdr-cta">
+        <i class="fa-solid fa-rocket"></i> Get in Touch
+      </a>
+
+      <!-- Hamburger -->
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <nav class="mobile-nav">
+        <a href="#about"           class="mnav-link"><i class="fa-solid fa-circle-info"></i> About</a>
+        <a href="#services"        class="mnav-link"><i class="fa-solid fa-layer-group"></i> Services</a>
+        <a href="#process"         class="mnav-link"><i class="fa-solid fa-diagram-project"></i> Process</a>
+        <a href="#team"            class="mnav-link"><i class="fa-solid fa-users"></i> Team</a>
+        <a href="#cases"           class="mnav-link"><i class="fa-solid fa-folder-open"></i> Case Studies</a>
+        <div class="mnav-divider">Assignment Tasks</div>
+        <a href="#company-profile" class="mnav-link"><i class="fa-solid fa-building"></i> Company Profile</a>
+        <a href="#managers-guide"  class="mnav-link"><i class="fa-solid fa-compass"></i> Manager's Guide</a>
+        <a href="#opinion"         class="mnav-link"><i class="fa-solid fa-brain"></i> Opinion + SWOT</a>
+        <a href="#legal-illegal" class="mnav-link">
+  <i class="fa-solid fa-scale-balanced"></i> Legal or Illegal?
+</a>
+        <a href="#contact"         class="mnav-link"><i class="fa-solid fa-envelope"></i> Contact</a>
+        <a href="#contact" class="btn btn-primary btn-full mt16">
+          <i class="fa-solid fa-rocket"></i> Start a Project
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero section" id="home">
+      <div class="hero-bg-orb orb-1"></div>
+      <div class="hero-bg-orb orb-2"></div>
+      <div class="hero-bg-orb orb-3"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="hero-badge glass">
+            <span class="badge-dot"></span>
+            <span>Available for new projects · May 2026</span>
+          </div>
+          <h1>We craft <span class="typed-text"></span><span class="typed-cursor" aria-hidden="true">|</span><br><span class="h1-sub">that drive real results.</span></h1>
+          <p class="hero-text">
+            InnoVerse delivers web development, UI/UX design, cloud deployment and automation —
+            turning client challenges into measurable, lasting outcomes.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-rocket"></i> Start a Project
+            </a>
+            <a href="#cases" class="btn btn-ghost btn-lg">
+              <i class="fa-solid fa-folder-open"></i> View Case Studies
+              <i class="fa-solid fa-arrow-right fa-xs"></i>
+            </a>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric glass">
+              <strong>3+</strong>
+              <span>Projects delivered</span>
+            </div>
+            <div class="metric glass">
+              <strong>4</strong>
+              <span>Core services</span>
+            </div>
+            <div class="metric glass">
+              <strong>2</strong>
+              <span>Expert specialists</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card glass floating-card">
+            <div class="card-topline">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="dashboard-title">
+              <h3>Business Portfolio Snapshot</h3>
+              <p>Premium identity. Strong structure. Clear value.</p>
+            </div>
+            <div class="dashboard-grid">
+              <div class="dash-box gradient-box">
+                <span>Brand</span>
+                <strong>Stable. Modern. Enterprise.</strong>
+              </div>
+              <div class="dash-box">
+                <span>Mission</span>
+                <strong>Build smarter client solutions</strong>
+              </div>
+              <div class="dash-box">
+                <span>Tone</span>
+                <strong>Professional &amp; forward-looking</strong>
+              </div>
+              <div class="dash-box gradient-box">
+                <span>Focus</span>
+                <strong>Web, systems, cloud &amp; design</strong>
+              </div>
+            </div>
+            <!-- live activity bar -->
+            <div class="activity-bar">
+              <div class="ab-dot"></div>
+              <span>Live portfolio · Updated May 2026</span>
+            </div>
+          </div>
+          <!-- floating badges -->
+          <div class="hero-badge-float badge-f1 glass"><i class="fa-solid fa-code"></i> Web Dev</div>
+          <div class="hero-badge-float badge-f2 glass"><i class="fa-solid fa-cloud"></i> Cloud</div>
+          <div class="hero-badge-float badge-f3 glass"><i class="fa-solid fa-gears"></i> Auto</div>
+        </div>
+      </div>
+      <div class="scroll-hint"><span></span></div>
+    </section>
+
+    <!-- ===================== TICKER ===================== -->
+    <section class="brands section-sm">
+      <div class="container ticker-wrap glass reveal">
+        <div class="ticker-track">
+          <span>WEB DEVELOPMENT</span><span>UI/UX DESIGN</span><span>AUTOMATION</span>
+          <span>CLOUD SUPPORT</span><span>DASHBOARD SYSTEMS</span><span>BRAND STRATEGY</span>
+          <span>REST APIs</span><span>NODE.JS</span><span>RESPONSIVE DESIGN</span>
+          <span>WEB DEVELOPMENT</span><span>UI/UX DESIGN</span><span>AUTOMATION</span>
+          <span>CLOUD SUPPORT</span><span>DASHBOARD SYSTEMS</span><span>BRAND STRATEGY</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about section" id="about">
+      <div class="section-divider top"></div>
+      <div class="container split-layout">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><i class="fa-solid fa-fingerprint"></i> Brand identity</p>
+          <h2>Built like a real business,<br>not just a class project.</h2>
+          <p>
+            This portfolio follows the assignment requirements with a clear business identity, a focused mission,
+            premium visuals, and a structure meant to impress stakeholders, teachers, and future clients.
+          </p>
+          <a href="#services" class="btn btn-ghost mt16">
+            See our services <i class="fa-solid fa-arrow-right fa-xs"></i>
+          </a>
+        </div>
+        <div class="about-cards">
+          <article class="info-card glass reveal">
+            <div class="card-icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Name &amp; Logo</h3>
+            <p>InnoVerse presents itself as a polished technology solutions company with a strong visual identity.</p>
+          </article>
+          <article class="info-card glass reveal">
+            <div class="card-icon-wrap"><i class="fa-solid fa-bullseye"></i></div>
+            <h3>Mission Statement</h3>
+            <p>We help businesses simplify operations, improve digital presence, and build efficient modern systems.</p>
+          </article>
+          <article class="info-card glass reveal">
+            <div class="card-icon-wrap"><i class="fa-solid fa-wave-square"></i></div>
+            <h3>Tone of Voice</h3>
+            <p>Enterprise-focused, reliable, innovative, and premium — designed to inspire trust and momentum.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="services section" id="services">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <p class="eyebrow"><i class="fa-solid fa-layer-group"></i> Service catalog</p>
+          <h2>The core capabilities we offer.</h2>
+          <p>From pixel-perfect design to scalable backend systems — we cover every layer of your digital product.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card glass reveal">
+            <div class="service-icon s1"><i class="fa-solid fa-code"></i></div>
+            <h3>Web Development</h3>
+            <p>Fast, responsive, and premium websites with strong performance, visuals, and customer-focused journeys.</p>
+            <div class="card-tags">
+              <span>HTML/CSS</span><span>JavaScript</span><span>Node.js</span>
+            </div>
+          </article>
+          <article class="service-card glass reveal">
+            <div class="service-icon s2"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>UI/UX Design</h3>
+            <p>Elegant interfaces designed to improve usability, clarity, and conversion across digital platforms.</p>
+            <div class="card-tags">
+              <span>Figma</span><span>Wireframes</span><span>Prototypes</span>
+            </div>
+          </article>
+          <article class="service-card glass reveal">
+            <div class="service-icon s3"><i class="fa-solid fa-cloud"></i></div>
+            <h3>Cloud &amp; Deployment</h3>
+            <p>Practical deployment support, scalable setup guidance, and digital infrastructure planning.</p>
+            <div class="card-tags">
+              <span>CI/CD</span><span>Hosting</span><span>DevOps</span>
+            </div>
+          </article>
+          <article class="service-card glass reveal">
+            <div class="service-icon s4"><i class="fa-solid fa-gears"></i></div>
+            <h3>Automation Systems</h3>
+            <p>Business process automation that reduces repetitive work and improves operational speed.</p>
+            <div class="card-tags">
+              <span>Scripts</span><span>APIs</span><span>Dashboards</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROCESS ===================== -->
+    <section class="process section" id="process">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <p class="eyebrow"><i class="fa-solid fa-diagram-project"></i> How we work</p>
+          <h2>Our 4-step delivery process.</h2>
+          <p>Every project follows a structured approach to ensure quality, clarity and on-time delivery.</p>
+        </div>
+        <div class="process-grid">
+          <div class="process-step glass reveal">
+            <div class="process-num">01</div>
+            <div class="process-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <h3>Discovery</h3>
+            <p>We analyse the client's business problem, goals and existing systems before proposing any solution.</p>
+          </div>
+          <div class="process-step glass reveal">
+            <div class="process-num">02</div>
+            <div class="process-icon"><i class="fa-solid fa-pencil-ruler"></i></div>
+            <h3>Design</h3>
+            <p>Wireframes, brand guidelines and UI prototypes are created and approved before development begins.</p>
+          </div>
+          <div class="process-step glass reveal">
+            <div class="process-num">03</div>
+            <div class="process-icon"><i class="fa-solid fa-terminal"></i></div>
+            <h3>Build</h3>
+            <p>Clean, maintainable code is written with performance and accessibility as core priorities throughout.</p>
+          </div>
+          <div class="process-step glass reveal">
+            <div class="process-num">04</div>
+            <div class="process-icon"><i class="fa-solid fa-rocket"></i></div>
+            <h3>Deliver</h3>
+            <p>Final product is tested, deployed and handed over with full documentation and a walkthrough session.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TEAM ===================== -->
+    <section class="team section" id="team">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><i class="fa-solid fa-users"></i> The team bio</p>
+          <h2>Skilled, adaptive, and collaboration-ready.</h2>
+        </div>
+        <div class="team-grid">
+          <article class="team-card glass reveal">
+            <div class="team-card-top">
+              <div class="avatar avatar-1">KK</div>
+              <div>
+                <h3>Khushbuben Khakhriya</h3>
+                <p class="role">Frontend &amp; Brand Experience</p>
+              </div>
+            </div>
+            <div class="skills-matrix">
+              <div class="skill-row">
+                <span class="skill-name">HTML / CSS</span>
+                <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+                <span class="skill-pct">95%</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-name">JavaScript</span>
+                <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-name">UI/UX Design</span>
+                <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-name">Responsive Layout</span>
+                <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+                <span class="skill-pct">90%</span>
+              </div>
+            </div>
+          </article>
+          <article class="team-card glass reveal">
+            <div class="team-card-top">
+              <div class="avatar avatar-2">JG</div>
+              <div>
+                <h3>Jenish Gadhiya</h3>
+                <p class="role">Backend &amp; Automation</p>
+              </div>
+            </div>
+            <div class="skills-matrix">
+              <div class="skill-row">
+                <span class="skill-name">Node.js / Express</span>
+                <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+                <span class="skill-pct">88%</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-name">REST APIs</span>
+                <div class="skill-bar"><div class="skill-fill" style="width:82%"></div></div>
+                <span class="skill-pct">82%</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-name">Automation Logic</span>
+                <div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div>
+                <span class="skill-pct">78%</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-name">Data Handling</span>
+                <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+                <span class="skill-pct">85%</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CASE STUDIES ===================== -->
+    <section class="cases section" id="cases">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><i class="fa-solid fa-star"></i> STAR case studies</p>
+          <h2>Projects explained in a business-friendly way.</h2>
+        </div>
+        <div class="cases-grid">
+          <article class="case-card glass reveal">
+            <div class="case-header">
+              <span class="case-no">01</span>
+              <span class="case-tag">E-Commerce</span>
+            </div>
+            <h3>Retail Product Showcase Platform</h3>
+            <p><strong>Situation:</strong> A local seller had no online presence — customers could not browse or trust their products remotely.</p>
+            <p><strong>Task:</strong> Build a professional product showcase to increase visibility and buyer confidence.</p>
+            <p><strong>Action:</strong> Designed and built a responsive showcase site with strong visuals, clear product categories and a contact flow.</p>
+            <p><strong>Result:</strong> <span class="result-highlight">Reduced customer enquiry time by 40% and increased product visibility by 3× within the first month.</span></p>
+          </article>
+          <article class="case-card glass reveal">
+            <div class="case-header">
+              <span class="case-no">02</span>
+              <span class="case-tag">Automation</span>
+            </div>
+            <h3>Manual Workflow Simplification</h3>
+            <p><strong>Situation:</strong> A small business was spending 5+ hours per week on repetitive data entry and manual reporting tasks.</p>
+            <p><strong>Task:</strong> Automate the workflow and reduce time spent on non-value-adding tasks.</p>
+            <p><strong>Action:</strong> Built an automation script with structured data flow and a simple dashboard for output review.</p>
+            <p><strong>Result:</strong> <span class="result-highlight">Saved 4.5 hours per week and reduced manual data errors by 90%, freeing staff for higher-priority work.</span></p>
+          </article>
+          <article class="case-card glass reveal">
+            <div class="case-header">
+              <span class="case-no">03</span>
+              <span class="case-tag">Portfolio</span>
+            </div>
+            <h3>Portfolio Website for Student IT Team</h3>
+            <p><strong>Situation:</strong> Our team needed a professional portfolio to present capabilities to teachers and future clients.</p>
+            <p><strong>Task:</strong> Build a premium business portfolio aligned with academic requirements and real-world standards.</p>
+            <p><strong>Action:</strong> Created a fully animated, responsive portfolio with structured sections, working backend and a live contact form.</p>
+            <p><strong>Result:</strong> <span class="result-highlight">Delivered 100% section coverage of the assignment brief with live skills matrix, STAR cases and backend integration.</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXECUTIVE SUMMARY ===================== -->
+    <section class="summary section" id="summary">
+      <div class="container summary-panel glass reveal">
+        <div class="summary-intro">
+          <p class="eyebrow"><i class="fa-solid fa-chart-pie"></i> Executive summary</p>
+          <h2>Why InnoVerse stands out.</h2>
+        </div>
+        <div class="summary-grid">
+          <div class="summary-item">
+            <div class="s-icon"><i class="fa-solid fa-bolt"></i></div>
+            <strong>Clear value</strong>
+            <p>We communicate services in a way that is easy for clients and stakeholders to understand.</p>
+          </div>
+          <div class="summary-item">
+            <div class="s-icon"><i class="fa-solid fa-users"></i></div>
+            <strong>Human capital</strong>
+            <p>Our team combines frontend design thinking, backend execution and project coordination.</p>
+          </div>
+          <div class="summary-item">
+            <div class="s-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <strong>Outcome focused</strong>
+            <p>We present projects through measurable impact and business relevance — not just technical detail.</p>
+          </div>
+          <div class="summary-item">
+            <div class="s-icon"><i class="fa-solid fa-display"></i></div>
+            <strong>Presentation ready</strong>
+            <p>This website is designed to support classroom presentation and future portfolio expansion.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TASK 1: COMPANY PROFILE ===================== -->
+    <section class="docs section" id="company-profile">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <h2>Company Profile</h2>
+          <p>A 1–3 page report describing how we would structure a start-up in our field, the roles required, the products &amp; services we'd offer, and how we reach customers.</p>
+        </div>
+
+        <article class="doc-card glass reveal">
+          <div class="doc-header">
+            <div>
+              <h3>InnoVerse — Company Profile Report</h3>
+              <p class="doc-meta"><i class="fa-solid fa-tag"></i> Field: IT Services (Web, UI/UX, Cloud &amp; Automation) &nbsp;·&nbsp; Version: May 2026</p>
+            </div>
+            <a class="btn btn-ghost" href="#contact"><i class="fa-solid fa-paper-plane"></i> Ask about this report</a>
+          </div>
+
+          <div class="doc-content">
+            <h4>1) Company identity &amp; purpose</h4>
+            <p>
+              InnoVerse is a start-up technology studio that helps small and medium businesses modernize their digital presence and internal operations.
+              We focus on practical, measurable outcomes: faster workflows, clearer customer journeys, and reliable systems that are easy to maintain.
+            </p>
+
+            <h4>2) How the company is structured</h4>
+            <p>
+              We use a small "core team + flexible specialists" model. The core team covers strategy, design, engineering and delivery,
+              while specialists (content, QA, SEO, cloud security) are added per project as needed.
+            </p>
+
+            <div class="two-col">
+              <div class="mini-card glass">
+                <h5><i class="fa-solid fa-circle-dot"></i> Core positions (always needed)</h5>
+                <ul class="bullets">
+                  <li><strong>Founder / Project Manager</strong> — client communication, timelines, scope and quality control.</li>
+                  <li><strong>Frontend Developer</strong> — responsive UI, accessibility, performance, animations.</li>
+                  <li><strong>Backend Developer</strong> — APIs, integrations, data storage, automation logic.</li>
+                  <li><strong>UI/UX Designer</strong> — research, wireframes, prototyping, brand consistency.</li>
+                </ul>
+              </div>
+              <div class="mini-card glass">
+                <h5><i class="fa-solid fa-circle-plus"></i> Specialist positions (as-needed)</h5>
+                <ul class="bullets">
+                  <li><strong>QA Tester</strong> — cross-device testing, bug tracking, regression checks.</li>
+                  <li><strong>Cloud/DevOps</strong> — deployments, monitoring, backups, CI/CD.</li>
+                  <li><strong>SEO / Content</strong> — search visibility, copywriting, landing page structure.</li>
+                  <li><strong>Security Reviewer</strong> — risk checks, basic threat modeling, safe defaults.</li>
+                </ul>
+              </div>
+            </div>
+
+            <h4>3) Products &amp; services offered</h4>
+            <div class="pill-grid">
+              <div class="pill glass"><i class="fa-solid fa-code"></i> Business websites &amp; landing pages</div>
+              <div class="pill glass"><i class="fa-solid fa-pen-nib"></i> UI/UX design systems</div>
+              <div class="pill glass"><i class="fa-solid fa-cloud-arrow-up"></i> Hosting, deployment &amp; cloud guidance</div>
+              <div class="pill glass"><i class="fa-solid fa-gears"></i> Automation &amp; workflow tools</div>
+              <div class="pill glass"><i class="fa-solid fa-chart-line"></i> Dashboards &amp; reporting</div>
+              <div class="pill glass"><i class="fa-solid fa-plug"></i> API integrations</div>
+            </div>
+
+            <h4>4) How we reach customers (marketing &amp; sales)</h4>
+            <p>Our customer acquisition is built around credibility and proof: a clear website, case studies, and direct outreach. We use a simple funnel: attract → build trust → consult → deliver → retain.</p>
+            <ul class="bullets">
+              <li><strong>Online presence</strong>: portfolio site, service pages, and short project write-ups (STAR format).</li>
+              <li><strong>Direct outreach</strong>: contacting local businesses, offering a free 20-minute audit and a clear proposal.</li>
+              <li><strong>Referrals</strong>: incentivized referral program after successful delivery.</li>
+              <li><strong>Retention</strong>: maintenance plans for updates, backups, performance and small improvements.</li>
+            </ul>
+
+            <h4>5) Operating principles</h4>
+            <ul class="bullets">
+              <li><strong>Clarity</strong>: simple communication, written scope, visible milestones.</li>
+              <li><strong>Quality</strong>: accessibility, responsiveness, performance-first delivery.</li>
+              <li><strong>Trust</strong>: secure handling of data, transparent pricing, documented handover.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== TASK 2: MANAGER'S GUIDE ===================== -->
+    <section class="docs section" id="managers-guide">
+      <div class="container">
+        <div class="section-heading center reveal"></p>
+          <h2>The Manager's Guide</h2>
+          <p>A poster-style guide explaining what "The Manager's Guide" means to us — including expectations and ways to achieve them.</p>
+        </div>
+
+        <div class="poster glass reveal" role="article" aria-label="The Manager's Guide poster">
+          <div class="poster-head">
+            <div class="poster-badge-icon"><i class="fa-solid fa-compass"></i></div>
+            <div>
+              <p class="poster-eyebrow">Information Poster</p>
+              <h3>The Manager's Guide</h3>
+              <p class="poster-sub">A simple framework for leading projects with clarity, consistency, and accountability.</p>
+            </div>
+          </div>
+
+          <div class="poster-grid">
+            <section class="poster-block">
+              <h4><i class="fa-solid fa-list-check"></i> Expectations</h4>
+              <ul class="bullets">
+                <li><strong>Set direction</strong> with clear goals, priorities and definitions of "done".</li>
+                <li><strong>Communicate early</strong> — share updates before problems grow.</li>
+                <li><strong>Protect quality</strong> — ensure testing, accessibility and standards.</li>
+                <li><strong>Support the team</strong> — remove blockers and distribute work fairly.</li>
+                <li><strong>Own outcomes</strong> — take responsibility for delivery and learn from results.</li>
+              </ul>
+            </section>
+            <section class="poster-block">
+              <h4><i class="fa-solid fa-route"></i> How to achieve them</h4>
+              <ul class="bullets">
+                <li><strong>Weekly plan</strong>: choose 3–5 goals, assign owners, set due dates.</li>
+                <li><strong>Daily check-ins</strong>: 5 minutes to track progress and blockers.</li>
+                <li><strong>Definition of done</strong>: checklist for quality (responsive, accessible, working links).</li>
+                <li><strong>Review rhythm</strong>: demo progress, collect feedback, improve quickly.</li>
+                <li><strong>Post-mortem</strong>: after delivery, write what worked and what to improve.</li>
+              </ul>
+            </section>
+            <section class="poster-block poster-highlight">
+              <h4><i class="fa-solid fa-bullseye"></i> What it means to us</h4>
+              <p>
+                To us, "The Manager's Guide" is not about control — it's about <strong>creating a system</strong> where the team can do their best work.
+                A good manager keeps expectations visible, makes progress measurable, and builds confidence through consistent execution.
+              </p>
+              <div class="poster-quote">
+                <i class="fa-solid fa-quote-left"></i>
+                <span>"Clear plan. Calm delivery. Strong results."</span>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== INDIVIDUAL TASK: OPINION + SWOT ===================== -->
+    <section class="docs section" id="opinion">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <h2>Benefits &amp; Risks of Always-Evolving Technology</h2>
+          <p>SWOT analysis included, with one chosen aspect highlighted (~250–300 words).</p>
+        </div>
+
+        <article class="doc-card glass reveal">
+          <div class="doc-content">
+            <h4>SWOT analysis — always-evolving technology</h4>
+             <p style="color: var(--secondary); font-size: 0.85rem; margin-bottom: 1.2rem; font-weight: 600; letter-spacing: 0.05em;">By Khushbuben Khakhriya</p>
+            <div class="swot-grid">
+              <div class="swot-cell swot-s">
+                <h5><i class="fa-solid fa-plus"></i> Strengths</h5>
+                <ul class="bullets">
+                  <li><strong>Efficiency</strong> through automation and better tools.</li>
+                  <li><strong>Innovation</strong> that creates new careers and industries.</li>
+                  <li><strong>Access</strong> to education, services and global markets.</li>
+                </ul>
+              </div>
+              <div class="swot-cell swot-w">
+                <h5><i class="fa-solid fa-triangle-exclamation"></i> Weaknesses</h5>
+                <ul class="bullets">
+                  <li><strong>Complexity</strong> makes systems harder to secure and maintain.</li>
+                  <li><strong>Skill gaps</strong> as tools change faster than training.</li>
+                  <li><strong>Dependence</strong> on platforms, updates and connectivity.</li>
+                </ul>
+              </div>
+              <div class="swot-cell swot-o">
+                <h5><i class="fa-solid fa-arrow-trend-up"></i> Opportunities</h5>
+                <ul class="bullets">
+                  <li><strong>Smarter services</strong> in healthcare, finance and education.</li>
+                  <li><strong>Business growth</strong> via digital reach and data-driven decisions.</li>
+                  <li><strong>Personalization</strong> for better user experiences.</li>
+                </ul>
+              </div>
+              <div class="swot-cell swot-t">
+                <h5><i class="fa-solid fa-skull-crossbones"></i> Threats</h5>
+                <ul class="bullets">
+                  <li><strong>Cybersecurity</strong> risks: breaches, ransomware, identity theft.</li>
+                  <li><strong>Misinformation</strong> amplified by fast-moving platforms and AI.</li>
+                  <li><strong>Inequality</strong> if benefits concentrate in a few groups.</li>
+                </ul>
+              </div>
+              
+            </div>
+
+            <h4>Chosen aspect: AI-powered tools in everyday life</h4>
+             <p style="color: var(--secondary); font-size: 0.85rem; margin-bottom: 1.2rem; font-weight: 600; letter-spacing: 0.05em;">By Jenish Gadhiya</p>
+           
+            <p>In today's world, technology is deeply embedded in almost every aspect of our daily lives. From the moment we wake up and check our phones, to using apps for banking, navigation, communication, and entertainment — we are constantly interacting with digital systems. However, what many people fail to consider is that these technologies carry real and significant vulnerabilities.</p>
+            
+            <p>Personally, I believe it is important to acknowledge and be aware of these vulnerabilities rather than simply ignore them. Every device we use — whether a smartphone, laptop, or smart home device — collects data, connects to networks, and can be exploited if not properly secured. Ignoring this reality is not only naive but potentially harmful to ourselves and those around us.</p>
+            
+            <p>For example, most people use the same password across multiple platforms, leave Bluetooth on in public spaces, or click on suspicious links without thinking twice. These small, everyday habits can lead to serious consequences such as identity theft, financial loss, and unauthorised access to private information.</p>
+            
+            <p>That said, I also understand why many people choose to ignore these risks. Technology is designed to be convenient, and constantly thinking about security can feel exhausting or overly technical for the average user. However, basic digital hygiene — using strong and unique passwords, enabling two-factor authentication, and keeping software regularly updated — can significantly reduce risk without requiring expert-level knowledge.</p>
+            
+            <p><span class="result-highlight">In my opinion, acknowledging technology's vulnerabilities is not about living in fear. It is about being a responsible and informed user in an increasingly digital world. Awareness is the first and most powerful step toward protection — and it begins with a simple decision to pay attention.</span></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  <!-- =========================================================
+     LEGAL OR ILLEGAL SECTION
+========================================================= -->
+
+<section class="docs section" id="legal-illegal">
+
+  <div class="container">
+
+    <!-- SECTION HEADING -->
+    <div class="section-heading center reveal">
+
+      <p class="eyebrow"><i class="fa-solid fa-traffic-light"></i> AI in Academia &nbsp;</p>
+
+      <h2>Legal or Illegal?</h2>
+
+      <p>
+        This section explains the Traffic Light Model for Artificial Intelligence in academia.
+        The examples below demonstrate illegal (Red), questionable (Yellow), and legal (Green)
+        uses of AI tools in educational environments.
+      </p>
+
+    </div>
+
+    <!-- =========================================================
+     GROUP TASK MINI BOX
+========================================================= -->
+
+<div class="group-task-mini glass reveal">
+
+  <div class="group-mini-icon">
+    <i class="fa-solid fa-users"></i>
+  </div>
+
+  <div class="group-mini-content">
+
+    <strong>Group Task</strong>
+
+    <span>
+      — Khushbuben Khakhriya & Jenish Gadhiya
+    </span>
+
+  </div>
+
+</div>
+
+    <!-- TRAFFIC GRID -->
+    <div class="traffic-grid">
+
+      <!-- =========================================================
+           RED
+      ========================================================= -->
+
+      <article class="traffic-card red glass reveal">
+
+        <div class="traffic-icon">🔴</div>
+
+        <h3>Illegal Use of AI</h3>
+
+        <p class="traffic-desc">
+          Red represents unethical and prohibited AI usage in academia.
+          These actions break academic integrity rules and may lead to plagiarism,
+          disciplinary action, or failing grades.
+        </p>
+
+        <div class="traffic-examples">
+
+          <div class="example-box">
+
+            <h4>Example 1: Full AI-Generated Assignment</h4>
+
+            <p>
+              A student asks ChatGPT to create an entire research paper and submits
+              it without editing, understanding, or mentioning AI usage.
+              The assignment is presented as completely original work even though
+              the student did not create the content independently.
+            </p>
+
+          </div>
+
+          <div class="example-box">
+
+            <h4>Example 2: AI During Online Exams</h4>
+
+            <p>
+              During an online examination, a student secretly uses AI tools
+              to answer questions in real time. This is considered cheating
+              because the answers are not created independently by the student.
+            </p>
+
+          </div>
+
+          <div class="example-box">
+
+            <h4>Example 3: Fake Sources and Citations</h4>
+
+            <p>
+              A student copies AI-generated references and academic citations
+              without checking whether the sources actually exist.
+              This spreads false information and damages the credibility
+              of academic research.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="traffic-label">
+          Academic misconduct and plagiarism
+        </div>
+
+      </article>
+
+      <!-- =========================================================
+           YELLOW
+      ========================================================= -->
+
+      <article class="traffic-card yellow glass reveal">
+
+        <div class="traffic-icon">🟡</div>
+
+        <h3>Questionable Use of AI</h3>
+
+        <p class="traffic-desc">
+          Yellow represents AI usage that may be acceptable in some situations
+          but still requires caution, transparency, and teacher approval.
+        </p>
+
+        <div class="traffic-examples">
+
+          <div class="example-box">
+
+            <h4>Example 1: AI Rewriting Large Sections</h4>
+
+            <p>
+              A student writes the assignment independently but uses AI
+              to rewrite paragraphs, improve sentence structure,
+              and make the language sound more academic.
+              The core ideas are original, but the final wording relies heavily on AI.
+            </p>
+
+          </div>
+
+          <div class="example-box">
+
+            <h4>Example 2: AI-Assisted Brainstorming</h4>
+
+            <p>
+              A student asks AI to generate research questions,
+              outlines, and possible arguments before beginning the assignment.
+              While this can support creativity, excessive dependence may reduce
+              independent thinking and originality.
+            </p>
+
+          </div>
+
+          <div class="example-box">
+
+            <h4>Example 3: Translation and Language Support</h4>
+
+            <p>
+              Non-native English speakers may use AI tools for grammar correction,
+              translation, and academic language improvement.
+              This can be helpful, but some institutions may require students
+              to clearly disclose how AI was used.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="traffic-label">
+          Requires caution and transparency
+        </div>
+
+      </article>
+
+      <!-- =========================================================
+           GREEN
+      ========================================================= -->
+
+      <article class="traffic-card green glass reveal">
+
+        <div class="traffic-icon">🟢</div>
+
+        <h3>Legal Use of AI</h3>
+
+        <p class="traffic-desc">
+          Green represents ethical and responsible AI usage that supports learning
+          without replacing the student's own academic work.
+        </p>
+
+        <div class="traffic-examples">
+
+          <div class="example-box">
+
+            <h4>Example 1: Learning Difficult Concepts</h4>
+
+            <p>
+              A student uses AI to better understand programming,
+              mathematics, or scientific theories by asking for explanations,
+              examples, and step-by-step guidance.
+              The final work is still completed independently.
+            </p>
+
+          </div>
+
+          <div class="example-box">
+
+            <h4>Example 2: Grammar and Proofreading Help</h4>
+
+            <p>
+              AI tools are used to check grammar, punctuation,
+              spelling, and sentence clarity before submission.
+              The ideas, analysis, and content remain fully created by the student.
+            </p>
+
+          </div>
+
+          <div class="example-box">
+
+            <h4>Example 3: Study and Revision Support</h4>
+
+            <p>
+              A student uses AI to generate summaries, flashcards,
+              quiz questions, or revision notes while preparing for exams.
+              The AI supports learning rather than replacing the student's own work.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="traffic-label">
+          Ethical and responsible AI usage
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+    <!-- ===================== CONTACT ===================== -->
+    <section class="contact section" id="contact">
+      <div class="container contact-wrap">
+        <div class="contact-copy reveal">
+          <p class="eyebrow"><i class="fa-solid fa-satellite-dish"></i> Let's connect</p>
+          <h2>Ready to start something great together?</h2>
+          <p>Use this contact form to send an inquiry, demo message, or feedback. We'll get back to you within 24 hours.</p>
+          <div class="contact-points">
+            <a href="mailto:innoverse@gmail.com" class="contact-item">
+              <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
+              <span>innoverse@gmail.com</span>
+            </a>
+            <a href="tel:+4915222333444" class="contact-item">
+              <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
+              <span>015222333444</span>
+            </a>
+            <div class="contact-item">
+              <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <span>Germany</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form glass reveal" id="contactForm" novalidate>
+          <div class="input-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required autocomplete="name">
+          </div>
+          <div class="input-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="email">
+          </div>
+          <div class="input-group">
+            <label for="service">Service Interest</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service</option>
+              <option>Web Development</option>
+              <option>UI/UX Design</option>
+              <option>Cloud &amp; Deployment</option>
+              <option>Automation Systems</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fa-solid fa-paper-plane"></i> Send Inquiry
+          </button>
+          <p class="form-status" id="formStatus"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="brand-mark sm"><span>IV</span></div>
+        <div>
+          <span class="brand-name">InnoVerse</span>
+          <small>Digital Growth &amp; IT Solutions</small>
+        </div>
+      </div>
+      
+      <div class="footer-right">
+        <p>© 2026 InnoVerse. Crafted for a premium business portfolio presentation.</p>
+        <a href="#home" class="back-top"><i class="fa-solid fa-arrow-up"></i> Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
