@@ -184,6 +184,8 @@ window.addEventListener('mouseleave', () => {
    TYPING ANIMATION (hero)
    ========================================================= */
 const typedEl = document.querySelector('.typed-text');
+const typedLine = document.querySelector('.hero-line-typed');
+const heroHeadline = document.querySelector('.hero-headline');
 const phrases = [
   'premium digital systems',
   'smart web solutions',
@@ -192,6 +194,37 @@ const phrases = [
   'stunning interfaces'
 ];
 let phraseIdx = 0, charIdx = 0, deleting = false;
+
+function lockHeroHeadlineHeight() {
+  if (!typedLine || !heroHeadline) return;
+
+  heroHeadline.style.minHeight = '';
+  typedLine.style.minHeight = '';
+
+  const longest = phrases.reduce((a, b) => (a.length > b.length ? a : b));
+  const probe = document.createElement('span');
+  probe.className = 'typed-text';
+  probe.setAttribute('aria-hidden', 'true');
+  probe.style.visibility = 'hidden';
+  probe.style.position = 'absolute';
+  probe.style.pointerEvents = 'none';
+  probe.style.left = '0';
+  probe.style.top = '0';
+  probe.textContent = longest;
+
+  typedLine.appendChild(probe);
+  typedLine.style.minHeight = probe.offsetHeight + 'px';
+  probe.remove();
+
+  heroHeadline.style.minHeight = heroHeadline.offsetHeight + 'px';
+}
+
+if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(lockHeroHeadlineHeight);
+} else {
+  window.addEventListener('load', lockHeroHeadlineHeight);
+}
+window.addEventListener('resize', lockHeroHeadlineHeight);
 
 function typeLoop() {
   if (!typedEl) return;
